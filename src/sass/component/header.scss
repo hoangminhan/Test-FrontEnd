@@ -1,0 +1,116 @@
+.header {
+  background-color: #111111;
+  height: $header-height;
+  color: #fff;
+  position: fixed;
+  width: 100%;
+  z-index: 99;
+
+  @include tablet {
+    height: $header-height-tablet;
+  }
+
+  &__content {
+    @include flex(space-between, center);
+    height: 100%;
+
+    &__logo {
+      display: flex;
+      align-items: center;
+      cursor: pointer;
+
+      @include mobile {
+        position: absolute;
+        left: 15px;
+      }
+    }
+
+    &__nav {
+      &__list {
+        display: flex;
+        align-items: center;
+
+        @include tablet {
+          padding-top: 32px;
+          flex-direction: column;
+          position: absolute;
+          top: $header-height-tablet;
+          left: 50%;
+          right: 0;
+          height: 100vh;
+          background-color: #111111;
+
+          display: block;
+          padding-left: 32px;
+
+          transform: translateX(100%);
+          opacity: 0;
+          visibility: hidden;
+          transition: all 0.1s ease;
+
+          @include mobile {
+            left: 0;
+          }
+        }
+      }
+      &__list.active {
+        transform: translateX(0);
+        opacity: 1;
+        visibility: visible;
+      }
+      &__item {
+        &__link {
+          color: #fff;
+          font-size: 1.4rem;
+          font-weight: normal;
+
+          @include tablet {
+            font-size: 2rem;
+          }
+        }
+        &__link::after {
+          content: "";
+          height: 3px;
+          width: 0;
+          transition: all 0.3s ease-in;
+        }
+      }
+      &__item:hover &__item__link::after {
+        width: 100%;
+        background-color: #fff;
+        display: block;
+
+        @include tablet {
+          background-color: #111111;
+        }
+      }
+
+      &__item + &__item {
+        margin-left: 20px;
+
+        @include tablet {
+          margin-left: 0;
+          margin-top: 12px;
+        }
+      }
+    }
+
+    &__icon--mobile {
+      font-size: 60px;
+      display: none;
+      cursor: pointer;
+
+      @include tablet {
+        display: block;
+        padding-top: 10px;
+      }
+      @include mobile {
+        display: block;
+        font-size: 50px;
+        position: absolute;
+        right: 0;
+        top: 5px;
+      }
+    }
+  }
+}

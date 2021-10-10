@@ -1,0 +1,14 @@
+@import "./variables";
+@import "./mixin";
+@import "./base";
+
+// component
+@import "./component/header.scss";
+@import "./component/banner";
+@import "./component/introduction";
+@import "./component/product";
+@import "./component/products";
+@import "./component/brandStory";
+@import "./component/issue";
+@import "./component/footer";
+@import "./component/whatHappen";

@@ -1,0 +1,89 @@
+.footer {
+  padding: 32px 0;
+  padding-bottom: 64px;
+  font-size: 1.4rem;
+  &__content {
+    display: flex;
+    justify-content: space-around;
+
+    @include mobile {
+      flex-direction: column;
+    }
+
+    &__left {
+      flex: 1;
+
+      @include mobile {
+        padding-bottom: 32px;
+      }
+
+      &__title {
+        font-weight: bold;
+        padding-bottom: 12px;
+      }
+      &__item {
+        font-weight: 300;
+      }
+    }
+    &__right {
+      flex: 4;
+
+      display: flex;
+      justify-content: flex-end;
+      padding-left: 64px;
+
+      @include mobile {
+        flex-direction: column;
+        padding-left: 0px;
+      }
+
+      &__item {
+        &__title {
+          padding-bottom: 12px;
+        }
+        &__content {
+          line-height: 24px;
+        }
+      }
+      &__item + &__item {
+        padding-left: 24px;
+        @include mobile {
+          padding-left: 0px;
+          padding-top: 12px;
+        }
+      }
+    }
+  }
+
+  &__copyRight {
+    display: flex;
+    padding-top: 64px;
+    @include mobile {
+      flex-direction: column;
+      font-size: 16px;
+      padding-top: 64px;
+    }
+
+    &__left {
+      flex: 1;
+      font-size: 14px;
+      font-weight: 300;
+      @include mobile {
+        font-size: 16px;
+      }
+    }
+    &__right {
+      display: flex;
+      justify-content: flex-end;
+      flex: 1;
+
+      @include mobile {
+        justify-content: flex-start;
+        padding-top: 12px;
+      }
+      &__item + &__item {
+        padding-left: 12px;
+      }
+    }
+  }
+}

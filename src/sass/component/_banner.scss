@@ -1,0 +1,13 @@
+.banner {
+  padding-top: $header-height;
+  @include tablet {
+    padding-top: $header-height-tablet;
+  }
+  img {
+    display: block;
+  }
+  &__logo {
+    object-fit: contain;
+    display: block;
+  }
+}

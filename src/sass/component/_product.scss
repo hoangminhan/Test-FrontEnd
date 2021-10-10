@@ -1,0 +1,122 @@
+.product {
+  &__content {
+    position: relative;
+    color: #f96400;
+    img {
+      display: block;
+    }
+
+    &__header {
+      position: absolute;
+      top: 10px;
+      left: 50%;
+      transform: translateX(-50%);
+      text-align: center;
+
+      @include tablet {
+        top: 10px;
+      }
+      @include mobile {
+        top: 2px;
+      }
+
+      &__title {
+        font-size: 50px;
+        letter-spacing: 5px;
+        line-height: 60px;
+
+        @include tablet {
+          font-size: 30px;
+          line-height: normal;
+        }
+        @include mobile {
+          font-size: 13px;
+        }
+      }
+      &__des {
+        font-size: 20px;
+        @include tablet {
+          font-size: 1.6rem;
+          display: -webkit-box;
+          -webkit-box-orient: vertical;
+          -webkit-line-clamp: 2;
+          overflow: hidden;
+        }
+      }
+    }
+
+    &__body {
+      display: flex;
+      justify-content: center;
+      padding: 0 100px;
+      position: absolute;
+      top: 33.5%;
+
+      @include tablet {
+        padding: 0;
+        top: 34.5%;
+      }
+
+      &__item {
+        &__image {
+          position: relative;
+
+          @include mobile {
+            // top: 17px;
+          }
+
+          &__header {
+            position: absolute;
+            top: -50px;
+
+            @include tablet {
+              width: 20%;
+              top: -25px;
+            }
+            @include mobile {
+              top: 0px;
+            }
+
+            img {
+            }
+          }
+          &__bottom {
+            position: absolute;
+            left: 8%;
+            right: 8%;
+            bottom: -30px;
+            background-color: #fff;
+
+            border: solid #000;
+            padding: 2px;
+
+            display: flex;
+            align-items: center;
+
+            @include tablet {
+              left: 0;
+              right: 0;
+              padding: 2px;
+            }
+            @include mobile {
+              // fle
+            }
+            p {
+              padding: 12px;
+              font-size: 16px;
+
+              @include mobile {
+                font-size: 13px;
+                padding: 4px;
+                display: -webkit-box;
+                -webkit-box-orient: vertical;
+                -webkit-line-clamp: 2;
+                overflow: hidden;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
