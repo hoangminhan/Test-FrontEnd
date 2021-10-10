@@ -18,6 +18,9 @@
       }
       @include mobile {
         top: 8px;
+        left: 20px;
+        right: 20px;
+        transform: translateX(0);
       }
 
       &__title {
@@ -42,6 +45,10 @@
           -webkit-line-clamp: 2;
           overflow: hidden;
         }
+
+        @include mobile {
+          font-size: 1.3rem;
+        }
       }
     }
 
@@ -54,7 +61,7 @@
 
       @include tablet {
         padding: 0;
-        top: 34.5%;
+        top: 33.5%;
       }
 
       &__item {
@@ -84,7 +91,7 @@
             position: absolute;
             left: 8%;
             right: 8%;
-            bottom: -30px;
+            bottom: -40px;
             background-color: #fff;
 
             border: solid #000;
@@ -107,7 +114,7 @@
 
               @include mobile {
                 font-size: 13px;
-                padding: 4px;
+                padding: 2px;
                 display: -webkit-box;
                 -webkit-box-orient: vertical;
                 -webkit-line-clamp: 2;

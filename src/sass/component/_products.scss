@@ -7,6 +7,7 @@
     &__image {
       transform: translateY(0);
       transition: transform 0.3s ease;
+      text-align: center;
     }
 
     &__image:hover {
